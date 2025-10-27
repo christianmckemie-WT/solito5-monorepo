@@ -18,6 +18,22 @@ config.resolver.nodeModulesPaths = [
 ]
 config.resolver.disableHierarchicalLookup = true
 
+// Block web-only packages that shouldn't be bundled in React Native
+config.resolver.blockList = [
+  /@radix-ui\/.*/,
+]
+
+config.resolver.resolveRequest = (context, moduleName, platform) => {
+  // Block @radix-ui imports for native platforms
+  if (moduleName.startsWith('@radix-ui/')) {
+    return {
+      type: 'empty',
+    }
+  }
+  // Use default resolver
+  return context.resolveRequest(context, moduleName, platform)
+}
+
 config.transformer.getTransformOptions = async () => ({
   transform: {
     experimentalImportSupport: false,
