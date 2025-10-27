@@ -20,11 +20,11 @@ While it's pretty barebones, it does a lot of the annoying config for you. The f
 
 - `solito` for cross-platform navigation
 - `moti` for animations
-- Expo SDK 53
-- Next.js 15
-- React Navigation 7
+- Expo SDK 54
+- Next.js 16
+- Expo Router 6
 - React 19 (read more below)
-- React Compiler
+- React Compiler 19
 
 For more, see the [compatibility docs](https://solito.dev/compatibility).
 

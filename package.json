@@ -7,9 +7,23 @@
   ],
   "devDependencies": {
     "@types/react": "^18.2.21",
-    "eslint": "^8.21.0",
+    "eslint": "^9.0.0",
     "turbo": "^2.4.4",
     "typescript": "^5.2.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "react-native-web": "~0.19.13"
+    },
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "19",
+        "react-dom": "19"
+      },
+      "ignoreMissing": [
+        "react-dom"
+      ]
+    }
   },
   "scripts": {
     "native": "cd apps/expo && pnpm start",

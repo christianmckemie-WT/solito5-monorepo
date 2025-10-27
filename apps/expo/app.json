@@ -11,6 +11,7 @@
     "newArchEnabled": true,
     "experiments": {
       "reactCanary": true
-    }
+    },
+    "plugins": ["expo-router"]
   }
 }
